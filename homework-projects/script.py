@@ -20,7 +20,7 @@ class Watcher(FileSystemEventHandler):
             self.run_script()
 
 if __name__ == "__main__":
-    script_name = "./lists/get-list.py"
+    script_name = "./loops/guess-num.py"
     event_handler = Watcher(script_name)
     observer = Observer()
     observer.schedule(event_handler, ".", recursive=True)
