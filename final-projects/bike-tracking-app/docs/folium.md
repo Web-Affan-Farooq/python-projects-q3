@@ -1,0 +1,1 @@
+## Guide for working with folium
