@@ -1,56 +1,33 @@
-import questionary
 import random
-import math
 
-# def hangman(score: int, total: int):
-#     # Calculate threshold for each stage
-#     calculated = total / 5  # Divide total mistakes into 5 equal parts
-    
-#     messages = [
-#         "Hangman has only head left",
-#         "Hangman has only head and left hand left",
-#         "Hangman has only head and hands left",
-#         "Hangman has its head and left leg along with both hands left",
-#         "Hangman is safe",
-#         "Hangman is dead",
-#     ]
-
-#     if score <= 0:  # If score is 0 or negative, Hangman is dead
-#         return messages[5]
-#     elif score <= calculated * 1:
-#         return messages[0]
-#     elif score <= calculated * 2:
-#         return messages[1]
-#     elif score <= calculated * 3:
-#         return messages[2]
-#     elif score <= calculated * 4:
-#         return messages[3]
-#     else:
-#         return messages[4]  # Score is high enough, Hangman is safe
-def hangman(mistakes_count:int, total:int):
-    calculated = total // 5
-    messages = [
-        "Hangman has only head left",
-        "Hangman has only head and left hand left",
-        "Hangman has only head and hands left",
-        "Hangman has its head and left leg along with both hands left",
-        "Hangman is safe",
-        "Hangman is dead",
-    ]
-    if mistakes_count >= total:  # Too many mistakes, Hangman is dead
-        print(messages[5])
-    elif mistakes_count >= calculated * 4:
-        print(messages[4])
-    elif mistakes_count >= calculated * 3:
-        print(messages[3])
-    elif mistakes_count >= calculated * 2:
-        print(messages[2])
-    elif mistakes_count >= calculated * 1:
-        print(messages[1])
-    else:
-        print(messages[0])
-    
-    # ___find any logical error 
+# Number of mistakes allowed : 6
+def draw_hangman(mistakes_count:int):
+    if(mistakes_count == 0):
+        print("  0  ")
+        print(" /|\\ ")
+        print(" / \\ ")
+    elif(mistakes_count == 1):
+        print("  0  ")
+        print(" /|\\ ")
+        print(" /  ")
+    elif(mistakes_count == 2):
+        print("  0  ")
+        print(" /|\\ ")
+        print(" ")
+    elif(mistakes_count == 3):
+        print("  0  ")
+        print(" /| ")
+        print(" ")
+    elif(mistakes_count == 4):
+        print("  0  ")
+        print(" | ")
+        print(" ")
+    elif(mistakes_count == 5):
+        print("  0  ")
+        print(" ")
+        print(" ")
+    elif(mistakes_count == 6):
+        print("Man is dead !")
 
 def main(word:str):# kite
     messages = [
@@ -61,71 +38,61 @@ def main(word:str):# kite
         "Hangman is safe",
         "Hangman is dead",
     ]
+    chars = set(word) 
+    lst = list(word)
+    # print(f"Set : {chars}")
+    # print(f"list : {lst}")
+    # print(f"Newlist :{list(chars)}")
     count = len(word) # 3
+
     score = 0
+
     mistakes_count = 0
-    for i in range(count):
-        required = word[i].lower()
-        print(f"Required = {required}")
-        user_guessed = input("Enter your guess  ").lower() 
-        if(user_guessed):
-            if(user_guessed == required):
+
+    constructed_string = []
+    for char in chars:
+        constructed_string.append("_")
+
+    for char in chars : 
+        print(constructed_string)
+        char = char.lower()
+        print(f"Required = {char}")
+        user_guessed = input("Enter your guess  ").lower()
+        idxs = []
+        for i,item in enumerate(lst):
+            if(item == char):
+                idxs.append(i)
+            else : pass
+
+        if(user_guessed and len(user_guessed) != 0):
+            if(user_guessed == char):
                 print("Great ! you've guessed correct ")
+                score +=1
                 print(f"Score : {score}")
-                print(f"Total : {count}")
+                # print(f"Total : {count}")
 
-            elif(user_guessed != required):
+                for idx in idxs:
+                    constructed_string[idx] = char 
+
+            elif(user_guessed != char):
                 print("Incorrect word ")
-                print(f"Score : {score}")
-                print(f"Total : {count}")
+                if(score != 0):score-=1
                 mistakes_count +=1
-                hangman(mistakes_count, count)
-        else :            
-            print("Please enter a word")
-        # calculated = count - count / 5
-        # print(f"Required : {required}")
-        # if(user_guessed != "" and user_guessed == required):
-        #     print("Great guess ")
-        #     score+=1 # score = 1
-        #     print("Score : ", score)
-        #     print("Total : ",count )
-        #     if(score >= 0 and score <= int(count / 5)*1):
-        #         print(messages[0])
-        #     elif(score > int(count/5)*1 and score <= int(count / 5)*2):
-        #         print(messages[1])
-        #     elif(score > int(count/5)*2 and score <= int(count / 5)*3):
-        #         print(messages[2])
-        #     elif(score > int(count/5)*3 and score == int(count / 5)*4):
-        #         print(messages[3])
-        #     elif(score > int(count/5)*4 and score == int(count / 5) *5):
-        #         print(messages[4])                
-        #     elif(score <=0):
-        #         print(messages[5])
-        # elif(user_guessed != "" and user_guessed != required):
-        #     print(f"Wrong ! the word is {required}")
-        #     score-=1 # score = 1
-        #     print("Score : ", score)
-        #     print("Total : ",count )
-        #     if(score >= 0 and score <= int(count / 5)*1):
-        #         print(messages[0])
-        #     elif(score > int(count/5)*1 and score <= int(count / 5)*2):
-        #         print(messages[1])
-        #     elif(score > int(count/5)*2 and score <= int(count / 5)*3):
-        #         print(messages[2])
-        #     elif(score > int(count/5)*3 and score == int(count / 5)*4):
-        #         print(messages[3])
-        #     elif(score > int(count/5)*4 and score == int(count / 5) *5):
-        #         print(messages[4])                
-        #     elif(score <=0):
-        #         print(messages[5])
+                print(f"Total : {count}")
+                print(f"Mistakes : {mistakes_count}")
+                print(f"Score : {score}")
 
-    
+            draw_hangman(mistakes_count)
+        else :            
+            print("Please enter only word") 
+ 
+# List must contains word lengthen greater than or 6 
 secret_words = [
     "Animal",
-    "kite",
-    "cat"
+    "Kitten",
+    "Dinosaur"
 ]
-
+print("Caution : Only 6 incorrect guesses allowed ...")
 selected_word = secret_words[random.randint(0,len(secret_words)-1)]
 
 main(selected_word)

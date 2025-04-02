@@ -9,16 +9,23 @@ This repository contains following projects:
 - If-else statements pratice projects (completed)
 - Expressions pratice projects (completed)
 - Introduction (completed)
-- List practice projects (Erase canvas remaining)
-- Dictionary (4th project remeining)
+- List practice projects (Completed)
+- Dictionary (Completed)
 - Loops (Completed)
 - Functions (completed)
 
-## 2. Online class projects :
+## 2. Online class projects : (Completed)
 - Basics (completed)
-- Intermediate (remaining)
+- Intermediate (completed)
 
-## 3. Final projects :
+## Python Mini projects :
+- 1. Madlibs python project [code](./mini-projects/mad-libs/) &nbsp; **Completed**
+- 2. Number guessing game (Combined and improved version) [code](./mini-projects/number-guessing-game/) &nbsp;  **Completed**
+- 3. Rock paper scissor [code](./mini-projects/rock-paper-scissor/)  &nbsp;  **Completed**
+- 4. Hangman Game  [code](./mini-projects/hangman/)  &nbsp;  **Completed**
+- 5. Countdown timer [code](./mini-projects/countdown-timer/) &nbsp;  **Completed**
+
+## 4. Final projects :
 - Streamlit web app 1 (remaining)
 - Streamlit web app 2 (data cleaner) (remaining)
 - Streamlit web app 3 (streamlit data science project ) (remaining)
