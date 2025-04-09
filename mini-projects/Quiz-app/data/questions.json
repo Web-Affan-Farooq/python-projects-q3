@@ -1,0 +1,112 @@
+[
+  {
+    "question": "What is the output of print(2 ** 3)?",
+    "options": ["5", "6", "8", "9"],
+    "correct_answer": "8"
+  },
+  {
+    "question": "Which of the following is a mutable data type in Python?",
+    "options": ["Tuple", "List", "String", "Integer"],
+    "correct_answer": "List"
+  },
+  {
+    "question": "How do you start a comment in Python?",
+    "options": ["//", "/*", "#", "--"],
+    "correct_answer": "#"
+  },
+  {
+    "question": "What will be the output of print(type([]))?",
+    "options": ["<class 'list'>", "<class 'tuple'>", "<class 'dict'>", "<class 'set'>"],
+    "correct_answer": "<class 'list'>"
+  },
+  {
+    "question": "Which method is used to add an item to the end of a list in Python?",
+    "options": ["append()", "add()", "insert()", "extend()"],
+    "correct_answer": "append()"
+  },
+  {
+    "question": "What is the keyword used to define a function in Python?",
+    "options": ["func", "define", "def", "function"],
+    "correct_answer": "def"
+  },
+  {
+    "question": "Which of the following is used to create an empty set in Python?",
+    "options": ["{}", "set()", "[]", "None of the above"],
+    "correct_answer": "set()"
+  },
+  {
+    "question": "What is the output of print(bool(0))?",
+    "options": ["True", "False", "None", "Error"],
+    "correct_answer": "False"
+  },
+  {
+    "question": "Which of the following is not a valid variable name in Python?",
+    "options": ["my_var", "_var", "2var", "var2"],
+    "correct_answer": "2var"
+  },
+  {
+    "question": "What is the output of print(3 == 3.0)?",
+    "options": ["True", "False", "None", "Error"],
+    "correct_answer": "True"
+  },
+  {
+    "question": "Which of the following is the correct way to open a file for reading in Python?",
+    "options": ["open('file.txt', 'r')", "open('file.txt', 'w')", "open('file.txt', 'rw')", "open('file.txt', 'rb')"],
+    "correct_answer": "open('file.txt', 'r')"
+  },
+  {
+    "question": "What is the output of print(len('Python'))?",
+    "options": ["5", "6", "7", "Error"],
+    "correct_answer": "6"
+  },
+  {
+    "question": "Which of the following is used to define a block of code in Python?",
+    "options": ["Brackets", "Indentation", "Parentheses", "Quotes"],
+    "correct_answer": "Indentation"
+  },
+  {
+    "question": "What is the output of print('Hello' + 'World')?",
+    "options": ["Hello World", "HelloWorld", "Hello+World", "Error"],
+    "correct_answer": "HelloWorld"
+  },
+  {
+    "question": "Which of the following is not a Python built-in data type?",
+    "options": ["List", "Dictionary", "Tuple", "Tree"],
+    "correct_answer": "Tree"
+  },
+  {
+    "question": "What is the output of print(10 // 3)?",
+    "options": ["3.333", "3", "4", "Error"],
+    "correct_answer": "3"
+  },
+  {
+    "question": "Which of the following functions converts a string to an integer in Python?",
+    "options": ["str()", "int()", "float()", "chr()"],
+    "correct_answer": "int()"
+  },
+  {
+    "question": "What is the output of print(bool([]))?",
+    "options": ["True", "False", "None", "Error"],
+    "correct_answer": "False"
+  },
+  {
+    "question": "Which of the following is used to create an empty dictionary in Python?",
+    "options": ["[]", "{}", "dict()", "None of the above"],
+    "correct_answer": "dict()"
+  },
+  {
+    "question": "What is the output of print(5 % 2)?",
+    "options": ["2.5", "2", "1", "0"],
+    "correct_answer": "1"
+  },
+  {
+    "question": "Which of the following methods is used to remove the last item from a list in Python?",
+    "options": ["remove()", "delete()", "pop()", "drop()"],
+    "correct_answer": "pop()"
+  },
+  {
+    "question": "What is the output of print(type((1,)))?",
+    "options": ["<class 'tuple'>", "<class 'int'>", "<class 'list'>", "<class 'str'>"],
+    "correct_answer": "<class 'tuple'>"
+  }
+]
