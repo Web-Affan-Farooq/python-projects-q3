@@ -25,7 +25,7 @@ with scan_tab_2:
         image = cv2.imdecode(img,cv2.IMREAD_COLOR)
         detector = cv2.QRCodeDetector()
         converted = detector.detectAndDecode(image)
-        print("Conveted :" , converted)
+        # print("Conveted :" , converted)
         st.text_area("Scanned Link ", value=converted[0])
         
         

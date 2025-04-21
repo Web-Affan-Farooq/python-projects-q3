@@ -5,11 +5,11 @@ import random
 import matplotlib.pyplot as plt
 from typing import Dict,List
 
+# ____Load quesions from json file 
 def load_questions():
     with open("./data/questions.json", "r") as f:
         questions = json.load(f)
         return questions
-
 questions = load_questions()[0:11] # Select first 10 questions 
 
 # __Basic structure 
@@ -20,44 +20,50 @@ questions = load_questions()[0:11] # Select first 10 questions
 #   },
 
 # ____Sessionn state working correctly
-if("count" not in st.session_state):
+if("count" not in st.session_state and 
+   "quiz_status" not in st.session_state and 
+   "selected_options" not in st.session_state and
+   "correct_options" not in st.session_state and 
+   "score" not in st.session_state):
+    
     st.session_state.count = 0  
-if("quiz_status" not in st.session_state):
-    st.session_state.quiz_status = False
-if("selected_options" not in st.session_state):
     st.session_state.selected_options = [] 
-if("correct_options" not in st.session_state):
     st.session_state.correct_options = []
-if("score" not in st.session_state):
     st.session_state.score = 0
-
-# state: Dict[int,bool,List[str],List[str],int]= st.session_state
+    st.session_state.quiz_status = False
+    
+lst = [i for i in range(0,10000)]
 
 def quiz_start():
-    for question in questions:
-        st.write(f"{st.session_state.count}. "+question["question"])
+    for idx,question in enumerate(questions):
+        st.write(f"{idx+1}. "+question["question"]) # Write question on screen
         options = question["options"]
-        selected_option = st.radio("",options=options, index=None, key=random.randint(0,1000))
-        if selected_option is not None:
-            # st.write("Selected option ",selected_option)
-            st.session_state.selected_options.append(selected_option)
-            # st.write("All selected options :",st.session_state.selected_options)
-            st.session_state.correct_options.append(question["correct_answer"])
-            st.session_state.count += 1
-            st.write(" ")
-            st.write(" ")
-            st.write(" ")
+        selectd_option_1 = st.checkbox(options[0],key=random.choice(lst))
+        selectd_option_2 = st.checkbox(options[1],key=random.choice(lst))
+        selectd_option_3 = st.checkbox(options[2],key=random.choice(lst))
+        selectd_option_4 = st.checkbox(options[3],key=random.choice(lst))
+        st.write("Corrected option : ", question["correct_answer"])
+        if(selectd_option_1 == question["correct_answer"]):
+            st.session_state.score +=1
+            st.write("Score : ", st.session_state.score)
+        else :
+            pass
+        # if selected_option is not None:
+        #     # st.write("Selected option ",selected_option)
+        #     st.session_state.selected_options.append(selected_option)
+        #     # st.write("All selected options :",st.session_state.selected_options)
+        #     st.session_state.correct_options.append(question["correct_answer"])
+        #     st.session_state.count += 1
+        #     st.write(" ")
+        #     st.write(" ")
+        #     st.write(" ")
         
-def change_state():
+st.title("Quiz application ")
+st.subheader("Let's check how sharp is your python programming skills are ")
+if st.button("Start quiz "):
     st.session_state.quiz_status = not st.session_state.quiz_status
-if(st.session_state.quiz_status):
+    st.write("Session state : ", st.session_state)
     quiz_start()
-else :
-    st.title("Quiz application ")
-    st.subheader("Let's check how sharp is your python programming skills are ")
-    st.write(st.session_state)
-    st.button("Start quiz ", on_click=change_state)
-
 
 #     if st.button("Submit"):
 #         if(None not in st.session_state.selected_options):

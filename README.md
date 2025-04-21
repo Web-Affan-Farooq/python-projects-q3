@@ -10,27 +10,13 @@ This repository contains following projects:
 ## 1. Home work projects : 
 
 <ol>
-        <li>If-else statements practice projects <a href="./homework-projects/if-else-statements/">Code</a> &nbsp;
-            <b>Completed</b>
-        </li>
-        <li>
-            - Expressions pratice projects <a href="./homework-projects/expressions/"></a> &nbsp; <b>Completed</b>
-        </li>
-        <li>
-            Introduction <a href="./homework-projects/intro/">Code </a> &nbsp; <b>Completed</b>
-        </li>
-        <li>
-            List practice projects <a href="./homework-projects/lists/">Code </a> &nbsp; <b>Completed</b>
-        </li>
-        <li>
-            Dictionary <a href="./homework-projects/dictionary/">Code </a> &nbsp; <b>Completed</b>
-        </li>
-        <li>
-            Loops <a href="./homework-projects/loops/">Code </a> &nbsp; <b>Completed</b>
-        </li>
-        <li>
-            Function <a href="./homework-projects/functions/">Code </a> &nbsp; <b>Completed</b>
-        </li>
+        <li>If-else statements practice projects <a href="./homework-projects/if-else-statements/">Code</a> &nbsp;<b>Completed</b></li>
+        <li>Expressions pratice projects <a href="./homework-projects/expressions/"></a> &nbsp; <b>Completed</b></li>
+        <li>Introduction <a href="./homework-projects/intro/">Code </a> &nbsp; <b>Completed</b></li>
+        <li>List practice projects <a href="./homework-projects/lists/">Code </a> &nbsp;<b>Completed</b></li>
+        <li>Dictionary <a href="./homework-projects/dictionary/">Code </a> &nbsp; <b>Completed</b></li>
+        <li>Loops <a href="./homework-projects/loops/">Code </a> &nbsp; <b>Completed</b></li>
+        <li>Function <a href="./homework-projects/functions/">Code </a> &nbsp; <b>Completed</b></li>
 </ol>
 
 ---
@@ -68,42 +54,18 @@ This repository contains following projects:
 
 ## 4. Mini Projects Only For Learning :
 <ol>
-        <li>Quiz application<a href="./mini-projects/Quiz-app/">Code</a>
-        </li>
-        <li>Tic-Tac-Toe AI Python Project
-        </li>
-        <li>
-            Library management application
-        </li>
-        <li>
-            Student management system (with face recognition attendance system)
-        </li>
-        <li>
-            Task tracker
-        </li>
-        <li>
-            Caching Proxy
-        </li>
-        <li>
-            Markdown note taking app
-        </li>
-        <li> Broadcast server
-        </li>
-        <li>
-            Realtime Leader board
-        </li>
-        <li>
-            Calculator application for desktop
-        </li>
-        <li>
-            Photo manipulation app
-        </li>
-        <li>
-            Discord bot
-        </li>
-        <li>
-            QR code generator and decoder app <a href="./mini-projects/QR-code-project/">code</a> &nbsp; <b>Completed</b>
-        </li>
+        <li>Quiz application<a href="./mini-projects/Quiz-app/">Code</a></li>
+        <li>Tic-Tac-Toe AI Python Project</li>
+        <li>Library management application</li>
+        <li>Task tracker</li>
+        <li>Caching Proxy</li>
+        <li>Markdown note taking app</li>
+        <li>Broadcast server</li>
+        <li>Realtime Leader board</li>
+        <li>Calculator application for desktop</li>
+        <li>Photo manipulation app</li>
+        <li>Discord bot</li>
+        <li>QR code generator and decoder app <a href="./mini-projects/QR-code-project/">code</a> &nbsp; <b>Completed</b></li>
 </ol>
 
 ---
@@ -119,15 +81,9 @@ This repository contains following projects:
 ## 6. Final projects :
 
 <ol>
-    <li>Bike Tracking application <a href="./final-projects/bike-tracking-app/">Code </a>&nbsp; <b>Completed</b></li>
-    <li>Streamlit data cleaner app</li>
-    <li>
-        Store analytics data science project 
-    </li>
-    <li>
-        python 15 playlist projects 
-    </li>
-    <li>
-        dashboard 
-    </li>
+    <li>Bike Tracking application</li>
+    <li>Data sweeper application <a href="./final-projects/data-sweeper/">Code </a>&nbsp; <b>Completed</b></li>
+    <li>Store analytics data science project </li>
+    <li>python 15 playlist projects </li>
+    <li>dashboard </li>
 </ol>
