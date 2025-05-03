@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_autorefresh import st_autorefresh
 from datetime import date
 
 if("Todos" not in st.session_state 
@@ -69,7 +68,7 @@ with edit_todo_tab:
             st.session_state.Todos[todo_index]["due-date"] = new_due_date 
             st.toast("Saved ")
             selected_todo_title = "No option selected"
-            st_autorefresh(interval=100, limit=1, key="refresh")
+            st.rerun()
     st.write(selected_todo)
 
 with list_tab:
